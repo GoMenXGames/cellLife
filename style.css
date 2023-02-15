@@ -1,0 +1,80 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+}
+
+.settings {
+    position: fixed;
+    top: 0;
+    padding: 10px;
+    width: 100vw;
+    box-shadow: 0 1px 1px 1px #0000003c;
+}
+
+.blur {
+    filter: blur(2px);
+}
+
+.blurText {
+    font-family: "Comic Sans MS";
+    font-size: 2em;
+    position: fixed;
+    text-align: center;
+    left: 24%;
+    top: 10px;
+    transform-origin: center;
+    color: rgb(181, 83, 63);
+    filter: drop-shadow(1px 1px 1px rgb(83, 46, 9));
+}
+
+.settings legend {
+    margin: 5px;
+    padding: 3px;
+}
+
+.grid {
+    margin-top: 70px;
+    display: flex;
+    flex-direction: column;
+    border: 3px rgb(38, 38, 38) solid;
+    overflow: scroll;
+    max-width: 90vw;
+    max-width: 90vh;
+}
+
+.grid .cell {
+    height: 13px;
+    width: 13px;
+    /* border: 1px dashed; */
+}
+
+.row {
+    display: flex;
+    height: 13px;
+}
+
+.cell {
+    position: relative;
+}
+
+.cell > * {
+    position: absolute;
+}
+
+.cell.life {
+    background-color: rgb(0, 0, 0);
+    /* border: 1px gray dashed; */
+} 
+
+.cell:hover {
+    filter: drop-shadow(0 0 1px rgb(0, 229, 255));  
+}
