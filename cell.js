@@ -113,9 +113,6 @@ function newCycle() {
     //console.log("Gen:", cycle);
 }
 
-function stop() {
-    clearInterval()
-}
 let someElem = "";
 function cellInteract() {
     const cells = grid.querySelectorAll(".cell");
@@ -143,8 +140,16 @@ function switchCell(cell) {
 
 newCycle();
 
-// setInterval(() => {
-//    newCycle(); 
-// }, settings.interval);
+
+let timer = [];
+
+function play() {
+    timer.push(setInterval(newCycle, settings.interval));
+    console.log(timer);
+}
+
+function stop() {
+    clearInterval(timer.pop());
+}
 
 //resetGrid();
