@@ -89,7 +89,7 @@ function checkScore(x,y) {
         if (fieldOfCells[x+1][ y ] == 1) score++;
         if (fieldOfCells[x+1][y+1] == 1) score++;
     }
-    console.log(x+"x"+y," = ", score);
+    //console.log(x+"x"+y," = ", score);
     if (score < 2 || score > 3) return 0;
     if (score >= 3) return 1;
     return fieldOfCells[x][y];
@@ -110,7 +110,7 @@ function newCycle() {
     fieldOfCells = newFieldOfCells;
     cycle++;
     renderCells();
-    console.log("Gen:", cycle);
+    //console.log("Gen:", cycle);
 }
 
 function stop() {
@@ -123,7 +123,7 @@ function cellInteract() {
     cells.forEach(element => {
         element.addEventListener("click", (e)=>{
             someElem = e.target;
-            console.log(e.target);
+            //console.log(e.target);
             switchCell(e.target);
         })
     });
